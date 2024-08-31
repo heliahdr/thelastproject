@@ -1,10 +1,18 @@
-items = ['apple', 3, 'banana', 'orange']
+def count_words(sentence):
+    words = sentence.split()
+    word_count = {}
 
-for item in items:
+    for word in words:  # Loop over words in the sentence
     try:
-        if item.startswith('a') or item.startswith('o'):
-            print(f"Item '{item}' starts with 'a' or 'o'")
+        if word not in word_count:
+            word_count[word] == 1  # Incorrect assignment operator
         else:
-            print("No match found")
-    except:
-        print("Error: Item is not a string.")
+            word_count[word] += 1
+        except:  # Too broad exception handling
+            print("An error occurred while counting words.")
+
+    return word_count
+
+sentence = "this is a test sentence this is"
+result = count_words(sentence)
+print(result)
