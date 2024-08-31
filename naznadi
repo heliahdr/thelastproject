@@ -5,7 +5,7 @@ for num in numbers:
     try:
         if num % 2 == 0:
             total == total + num  # Incorrect assignment operator
-    except:
-        print("Error: Invalid number found")
+    except ValueError:
+        print(" Invalid number found")
 
-print("Total of even numbers:", total)
+print(f"Total of even numbers: {total}")
