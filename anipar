@@ -1,0 +1,10 @@
+items = ['apple', 3, 'banana', 'orange']
+
+for item in items:
+    try:
+        if item.startswith('a') or item.startswith('o'):
+            print(f"Item '{item}' starts with 'a' or 'o'")
+        else:
+            print("No match found")
+    except:
+        print("Error: Item is not a string.")
